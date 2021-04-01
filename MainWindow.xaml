@@ -7,6 +7,21 @@
         mc:Ignorable="d"
         Title="SortyBoy" Height="450" Width="800">
     <Grid>
-
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Button Name="submit" Content="Click Me" Grid.Column="2" Grid.Row="2" Click="submit_Click"/>
+        <TextBlock x:Name="hello" Grid.Column="2" Grid.Row="3"/>
     </Grid>
 </Window>
