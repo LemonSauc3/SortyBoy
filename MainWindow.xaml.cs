@@ -20,9 +20,27 @@ namespace SortyBoy
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static bool clicked = true;
+        public static int counter = 0;
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void submit_Click(object sender, RoutedEventArgs e)
+        {
+            
+            if(clicked == false)
+            {
+                hello.Text = "";
+                clicked = true;
+            }
+            else
+            {
+                clicked = false;
+                counter++;
+                hello.Text = "Hello " + counter.ToString();
+            }
         }
     }
 }
