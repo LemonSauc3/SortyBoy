@@ -5,23 +5,138 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SortyBoy"
         mc:Ignorable="d"
-        Title="SortyBoy" Height="450" Width="800">
+        Title="SortyBoy" Height="600" Width="900"
+        ResizeMode="NoResize">
     <Grid>
+        <!-- Main Screen Layout -->
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="3*"/>
         </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
-        </Grid.RowDefinitions>
-        <Button Name="submit" Content="Click Me" Grid.Column="2" Grid.Row="2" Click="submit_Click"/>
-        <TextBlock x:Name="hello" Grid.Column="2" Grid.Row="3"/>
+        
+        <!-- Left screen layout -->
+        <Grid Grid.Column="0">
+            <!-- Row layout for the boxes to hold the file names -->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="8*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="8*"/>
+            </Grid.RowDefinitions>
+            <Border Grid.Row="0"
+                    BorderBrush="Black"
+                    BorderThickness="1"
+                    Margin="10">
+                <TextBlock Grid.Row="0" Name="Import"/>
+            </Border>
+            <Border Grid.Row="2"
+                    BorderBrush="Black"
+                    BorderThickness="1"
+                    Margin="10">
+                <TextBlock Grid.Row="2" Name="Export"/>
+            </Border>
+        </Grid>
+        <!-- right screen layout -->
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <!-- Settings area -->
+            <Grid Grid.Row="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="2*"/>
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0" Content="File Name"/>
+                <TextBox Grid.Row="1"
+                         Margin="10 12"
+                         FontSize="18"
+                         Name="File_Name_Input"
+                         TextChanged="Name_Entered"/>
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Content="# of Episodes"/>
+                    <Label Grid.Column="1" Content="Extension"/>
+                </Grid>
+                <Grid Grid.Row="3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <Border Grid.Column="0"
+                            BorderBrush="Black"
+                            BorderThickness="1"
+                            Margin="40 10">
+                        <TextBlock Grid.Column="0" Name="Files"/>
+                    </Border>
+                    <Border Grid.Column="1"
+                            BorderBrush="Black"
+                            BorderThickness="1"
+                            Margin="40 10">
+                        <TextBlock Grid.Column="1" Name="Extension"/>
+                    </Border>
+                </Grid>
+                <Grid Grid.Row="4">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Content="Source"/>
+                    <Label Grid.Column="1" Content="Destination"/>
+                </Grid>
+                <Grid Grid.Row="5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <Border Grid.Column="0"
+                            BorderThickness="1" 
+                            BorderBrush="Black"
+                            Margin="20 10">
+                        <TextBlock Grid.Column="0" Name="Import_Folder"/>
+                    </Border>
+                    <Border Grid.Column="1" 
+                            BorderThickness="1" 
+                            BorderBrush="Black"
+                            Margin="20 10">
+                        <TextBlock Grid.Column="1" Name="Export_Folder"/>
+                    </Border>
+                </Grid>
+                <Grid Grid.Row="6">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="0"
+                            Content="Source"
+                            Margin="40 15"
+                            Click="Import_Source"/>
+                    <Button Grid.Column="1"
+                            Content="Destination"
+                            Margin="40 15"
+                            Click="Export_Destination"/>
+                </Grid>
+            </Grid>
+            <!-- Convert area -->
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="6*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <Button Grid.Row="1" 
+                        Name="convert_content" 
+                        Content="Convert" 
+                        Margin="50 10"
+                        Click="Convert"/>
+            </Grid>
+        </Grid>
     </Grid>
 </Window>

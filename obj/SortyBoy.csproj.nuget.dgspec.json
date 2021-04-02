@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Tryfo\\Documents\\GitHub\\SortyBoy\\SortyBoy.csproj": {}
+    "C:\\Users\\rboyd\\Programming\\Github\\SortyBoy\\SortyBoy.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Tryfo\\Documents\\GitHub\\SortyBoy\\SortyBoy.csproj": {
+    "C:\\Users\\rboyd\\Programming\\Github\\SortyBoy\\SortyBoy.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Tryfo\\Documents\\GitHub\\SortyBoy\\SortyBoy.csproj",
+        "projectUniqueName": "C:\\Users\\rboyd\\Programming\\Github\\SortyBoy\\SortyBoy.csproj",
         "projectName": "SortyBoy",
-        "projectPath": "C:\\Users\\Tryfo\\Documents\\GitHub\\SortyBoy\\SortyBoy.csproj",
-        "packagesPath": "C:\\Users\\Tryfo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Tryfo\\Documents\\GitHub\\SortyBoy\\obj\\",
+        "projectPath": "C:\\Users\\rboyd\\Programming\\Github\\SortyBoy\\SortyBoy.csproj",
+        "packagesPath": "C:\\Users\\rboyd\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\rboyd\\Programming\\Github\\SortyBoy\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\Tryfo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\rboyd\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0-windows7.0"
